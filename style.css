@@ -1,0 +1,173 @@
+body
+{
+    background-image: url('/WEBPORT/pics/pexels-steve-johnson-1418595.jpg');
+     background-size:cover; 
+    background-repeat: no-repeat;
+  
+}
+nav{
+background-color: rgb(82, 79, 79);
+border-radius: 4px;
+
+}
+
+ol
+{
+    list-style: none;
+    color: black;
+    display:inline-flex;
+    margin-left: 30px;
+}
+li
+{
+    margin-right: 20px;
+}
+a:visited
+{
+    color: white;
+}
+a:link
+{
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration-color:white ;
+    height: 100px;
+}
+.aa:visited
+{
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.mhead{
+    display: inline-block;
+    /* margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    margin-bottom: 30%; */
+    margin-left: 20%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+   
+}
+
+.abtme
+{
+    margin-left: 30%;
+    min-height: 40px;
+    width: 200px;
+    background-color: white;
+    border-radius: 30px;
+    border-style: none;
+}
+.abtme:hover
+{
+    text-decoration-color: rgb(255, 255, 255);
+    background-color:orangered ;
+}
+.mhead:hover
+{
+    color:orangered;
+}
+.secscrol
+{
+    height: 100vh;
+    
+    
+}
+.firstscrol
+{
+    height: 100vh;
+}
+img
+{
+    height: 300px;
+    width:200px;
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: 3%;
+    
+    border-radius: 20px;
+box-shadow: 3px 10px 20px;
+
+}
+p
+{
+    
+   border-color: orangered;
+   border-width: 4px;
+   background-color: transparent;
+   color: white;
+   font-weight: 600;
+   padding-left: 100px;
+   padding-right: 40px;
+   font-size: 30px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p:hover
+{
+    padding-left: 100px;
+   padding-right: 40px;
+    color: orangered;
+    background-color: aliceblue;
+}
+img:hover
+{
+    margin-left: 230px;
+    transition: ease-in-out;
+    transform-origin: 10px;
+    transition-property: all;
+    transform-style: preserve-3d;
+    box-shadow: 20px 30px 60px;
+}
+ul
+{
+    display: inline-flex;
+    list-style: none;
+    color: orangered;
+    border-radius: 10px;
+    
+
+   
+}
+aside
+{
+    background-color:white;
+    border-radius: 10px;
+}
+.prjhead
+{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+   
+}
+iframe
+{
+    box-shadow: 3px 10px 20px orangered;
+    
+}
+.resu
+{
+    margin-left: 30%;
+    min-height: 40px;
+    width: 200px;
+    /* text-decoration-color: orangered; */
+    background-color: orangered;
+    border-radius: 30px;
+    border-style: none;
+}
+.resu:hover
+{
+    text-decoration-color: rgb(255, 255, 255);
+    background-color:rgb(21, 202, 225);
+    color: white;
+   
+}
+.ab:link:hover
+{
+    color: white;
+}
+
+  
