@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrightCHAMPS – Coding & Robotics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef1f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .course {
+      margin-bottom: 40px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .course-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .info {
+      margin-bottom: 10px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #bbb;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    .price-box {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    .discounted {
+      color: green;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .benefits, .why-brightchamps {
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .divider {
+      margin: 40px 0;
+      border-top: 2px dashed #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BrightCHAMPS</h1>
+    <h2>Coding & Robotics Programs</h2>
+
+    <!-- Coding Section -->
+    <div class="course">
+      <div class="course-title">💻 Coding Course</div>
+      <p class="info"><strong>Total Classes:</strong> 150</p>
+      <p class="info"><strong>Original Price:</strong> $7200</p>
+
+      <label for="couponCoding">Apply Coupon Code:</label>
+      <input type="text" id="couponCoding" placeholder="Enter code, e.g. ARUN50">
+      <button onclick="applyCoupon('coding')">Apply Coupon</button>
+
+      <div class="price-box" id="priceCoding"></div>
+      <div class="error" id="errorCoding"></div>
+
+      <div class="benefits">
+        <strong>📘 Benefits:</strong>
+        <ul>
+          <li>Learn Python, Scratch, AI, Web Dev & more</li>
+          <li>1:1 Live Sessions with Top Tutors</li>
+          <li>Real Projects & International Certifications</li>
+          <li>Build Logical Thinking & Creativity</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Robotics Section -->
+    <div class="course">
+      <div class="course-title">🤖 Robotics Course</div>
+      <p class="info"><strong>Total Classes:</strong> 150</p>
+      <p class="info"><strong>Original Price:</strong> $7200</p>
+
+      <label for="couponRobotics">Apply Coupon Code:</label>
+      <input type="text" id="couponRobotics" placeholder="Enter code, e.g. ARUN50">
+      <button onclick="applyCoupon('robotics')">Apply Coupon</button>
+
+      <div class="price-box" id="priceRobotics"></div>
+      <div class="error" id="errorRobotics"></div>
+
+      <div class="benefits">
+        <strong>📦 Benefits:</strong>
+        <ul>
+          <li>Build Real Robots with Hardware Kit</li>
+          <li>STEM Concepts + Hands-on Learning</li>
+          <li>1:1 Guidance from Expert Mentors</li>
+          <li>International STEM Certification</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Why BrightCHAMPS -->
+    <div class="why-brightchamps">
+      <h3>🌟 Why Parents Choose BrightCHAMPS</h3>
+      <ul>
+        <li>✅ 1:1 Live Classes</li>
+        <li>✅ Flexible Timings</li>
+        <li>✅ Dashboard Access – Track Progress</li>
+        <li>✅ Homework, Notes, Quizzes, Assignments</li>
+        <li>✅ Top Tutors</li>
+        <li>✅ STEM.org Certificate</li>
+        <li>✅ Competitions & Events</li>
+        <li>✅ Project-Based Learning</li>
+        <li>✅ Lifetime Platform Access</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function applyCoupon(course) {
+      const originalPrice = 7200;
+      const discountedPrice = 2439;
+      const couponCode = 'ARUN50';
+
+      const inputId = course === 'coding' ? 'couponCoding' : 'couponRobotics';
+      const priceId = course === 'coding' ? 'priceCoding' : 'priceRobotics';
+      const errorId = course === 'coding' ? 'errorCoding' : 'errorRobotics';
+
+      const input = document.getElementById(inputId).value.trim().toUpperCase();
+      const priceBox = document.getElementById(priceId);
+      const errorBox = document.getElementById(errorId);
+
+      priceBox.innerHTML = '';
+      errorBox.innerHTML = '';
+
+      if (input === couponCode) {
+        priceBox.innerHTML = `🎉 <strong>Discounted Price:</strong> <span class="discounted">$${discountedPrice.toFixed(2)}</span>`;
+      } else {
+        errorBox.innerText = '❌ Invalid coupon code.';
+      }
+    }
+  </script>
+</body>
+</html>
